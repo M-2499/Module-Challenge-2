@@ -28,3 +28,16 @@ The loop moves on to the next worksheet and repeats the process until all worksh
 The "stock_analysis" macro provides a useful tool for analyzing stock data across multiple worksheets. It calculates important metrics such as yearly change and percent change, and identifies stocks with the greatest changes and total volumes. The results are displayed in a clear and organized manner, making it easy to analyze and compare different stocks.
 With some customization, this macro can be enhanced further to include additional calculations or formatting options based on specific requirements.
 Overall, the "stock_analysis" macro can help investors and analysts gain valuable insights from their stock data and make informed decisions.
+
+#Additonal Questions/Calculations
+
+These customizations could be tailored to meet specific analytical needs and enhance the functionality and flexibility of the "stock_analysis" macro. Some additional calculations could include:
+
+Average Daily Change: Calculate the average daily change for each stock by dividing the yearly change by the number of trading days.
+Standard Deviation: Calculate the standard deviation of daily changes for each stock to measure volatility.
+Relative Strength Index (RSI): Calculate the RSI for each stock to assess its overbought or oversold conditions.
+
+Filtering and Sorting:
+
+Implement filters to allow users to filter stocks based on specific criteria such as minimum or maximum change, volume, or percentage change.
+Add sorting options to sort the stocks based on different metrics, such as sorting by yearly change in ascending or descending order.
