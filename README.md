@@ -1,7 +1,7 @@
 # Module-Challenge-2
 Challenge Files
 
-**Stock Analysis Macro**
+**Stock Analysis**
 
 The "stock_analysis" VBA macro is designed to analyze stock data in multiple worksheets within a workbook. It calculates various metrics such as yearly change, percent change, and total stock volume for each stock ticker. Additionally, it identifies stocks with the greatest percentage increase, greatest percentage decrease, and greatest total volume.
 
