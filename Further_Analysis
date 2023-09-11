@@ -1,6 +1,6 @@
 Further Analysis
 
-#New Analysis added/made: Average Daily Change, Standard Deviation, and RSI calculations.Additionally, a placeholder for the implementation of Filter and Sort Options has been included. Remember to complete the RSI calculation logic and implement the filter/sort options as per your specific requirements.
+#New Analysis added/made: Average Daily Change, Standard Deviation, and RSI calculations. Additionally, a placeholder for the implementation of Filter and Sort Options has been included. Remember to complete the RSI calculation logic and implement the filter/sort options as per your specific requirements.
 
 Sub stock_analysis():
     ' ... (previous code remains unchanged)
