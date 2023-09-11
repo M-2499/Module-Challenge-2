@@ -1,0 +1,64 @@
+Further Analysis
+
+#New Analysis added/made: Average Daily Change, Standard Deviation, and RSI calculations.Additionally, a placeholder for the implementation of Filter and Sort Options has been included. Remember to complete the RSI calculation logic and implement the filter/sort options as per your specific requirements.
+
+Sub stock_analysis():
+    ' ... (previous code remains unchanged)
+    
+    ' Additional Analysis Considerations
+    
+    ' Average Daily Change Calculation
+    ws.Range("M1").Value = "Average Daily Change"
+    ws.Range("N1").Value = "Ticker"
+    ws.Range("O1").Value = "Value"
+    For i = 2 To rowCount
+        If ws.Cells(i + 1, 1).Value <> ws.Cells(i, 1).Value Then
+            If days > 0 Then
+                averageChange = dailyChange / days
+                ws.Cells(j + 2, 14).Value = ws.Cells(i, 1).Value
+                ws.Cells(j + 2, 15).Value = averageChange
+                j = j + 1
+            End If
+            days = 0
+            dailyChange = 0
+        Else
+            days = days + 1
+            dailyChange = dailyChange + Abs(ws.Cells(i + 1, 3).Value - ws.Cells(i, 3).Value)
+        End If
+    Next i
+    
+    ' Standard Deviation Calculation
+    Dim sumSquaredDiff As Double
+    For i = 2 To rowCount
+        If ws.Cells(i + 1, 1).Value <> ws.Cells(i, 1).Value Then
+            If days > 0 Then
+                averageChange = dailyChange / days
+                sumSquaredDiff = 0
+                For k = i - days To i
+                    sumSquaredDiff = sumSquaredDiff + (Abs(ws.Cells(k + 1, 3).Value - ws.Cells(k, 3).Value) - averageChange) ^ 2
+                Next k
+                standardDeviation = Sqr(sumSquaredDiff / days)
+                ws.Cells(j + 2, 14).Value = ws.Cells(i, 1).Value
+                ws.Cells(j + 2, 15).Value = standardDeviation
+                j = j + 1
+            End If
+            days = 0
+            dailyChange = 0
+        Else
+            days = days + 1
+            dailyChange = dailyChange + Abs(ws.Cells(i + 1, 3).Value - ws.Cells(i, 3).Value)
+        End If
+    Next i
+    
+    ' RSI Calculation
+    ws.Range("M1").Value = "RSI"
+    ws.Range("N1").Value = "Ticker"
+    ws.Range("O1").Value = "Value"
+    For i = 2 To rowCount
+        ' Implement RSI calculation logic here
+    Next i
+    
+    ' Filter and Sort Options Implementation
+    ' Implement filter and sorting logic here
+    
+End Sub
