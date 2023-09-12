@@ -7,7 +7,7 @@ The "stock_analysis" VBA macro is designed to analyze stock data in multiple wor
 
 **Code Explanation**
 
-The code uses a loop to iterate through each worksheet in the workbook. Within each worksheet, it processes the stock data row by row to calculate the required metrics. The code initializes variables and sets up the column headers for the results. It determines the row number of the last row with data in column A. Using nested loops, the code iterates through each row of stock data. When a new stock ticker is encountered (i.e., the ticker symbol changes), it calculates and stores the results for the previous stock. If the total stock volume is zero, it handles this special case by displaying zero change, zero percent change, and zero total stock volume. For non-zero total stock volume, it calculates the change and percent change based on the opening and closing prices.
+The code uses a loop to iterate through each worksheet in the workbook. Within each worksheet, it processes the stock data row by row to calculate the required metrics. The code initializes variables and sets up the column headers for the results. 
 
 The results are displayed in the appropriate columns, with positive changes colored green, negative changes colored red, and zero changes without color.
 After processing all stock data, the code identifies the stocks with the greatest percentage increase, greatest percentage decrease, and greatest total volume. It stores the ticker symbols and corresponding values in separate cells.
